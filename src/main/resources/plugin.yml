@@ -1,0 +1,18 @@
+name: JetpackWingsuit
+version: '${version}'
+main: com.kodari.jetpack.JetpackWingsuitPlugin
+api-version: '1.21'
+author: Kodari
+description: Configurable jetpack and wingsuit flight systems.
+softdepend:
+  - CrackShot
+  - WeaponMechanics
+commands:
+  jpwsadmin:
+    description: Manage jetpacks and wingsuits.
+    usage: /jpwsadmin <give|fuel|reload>
+    aliases: [jpws]
+permissions:
+  jetpack.admin:
+    description: Give and reload JetpackWingsuit.
+    default: op

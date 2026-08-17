@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.kodari'
+version = '1.21.8'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21.8-R0.1-SNAPSHOT'
+    implementation 'com.github.cryptomorin:XSeries:11.2.0.1'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

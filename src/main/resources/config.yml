@@ -1,0 +1,70 @@
+fuel:
+  material: COAL
+  name: '&c&lJetpack Fuel'
+  lore:
+    - '&7- Jetpack'
+    - '&7- Wingsuit'
+  require-before-flight: true
+  consumption:
+    jetpack: 1
+    wingsuit: 1
+    wingsuit-boost: 3
+  interval-ticks:
+    jetpack: 40
+    wingsuit: 10
+
+jetpack:
+  material: GOLDEN_CHESTPLATE
+  name: '&6Jetpack'
+  lore:
+    - '&7A personal flight system.'
+    - '&eDouble-tap jump to activate.'
+  durability: 112
+  durability-usage: 1
+  flight-speed: 1
+  sprint-speed-multiplier: 1.65
+  particles:
+    - type: CLOUD
+      amount: 3
+      offset-x: 0.12
+      offset-y: 0.12
+      offset-z: 0.12
+    - type: FLAME
+      amount: 2
+      offset-x: 0.08
+      offset-y: 0.08
+      offset-z: 0.08
+
+wingsuit:
+  material: ELYTRA
+  name: '&bWingsuit'
+  lore:
+    - '&7A powered gliding suit.'
+    - '&eLook up and sneak on the ground to take off.'
+  takeoff-upward-angle: 10
+  boost:
+    strength: 1.1
+    upward-strength: 0.18
+    cooldown-ticks: 12
+    minimum-upward-angle: 5
+
+weapon-restrictions:
+  enabled: true
+  while-flying: true
+  while-wearing: true
+  allowed-crackshot-weapons:
+    - ExampleRifle
+  allowed-weaponmechanics-weapons:
+    - example_rifle
+  blocked-message: '&cYou cannot use &f{weapon} &cwhile using a Jetpack.'
+
+messages:
+  wingsuit-enabled: '&aWingsuit flight enabled.'
+  wingsuit-disabled: '&eWingsuit flight disabled.'
+  jetpack-broken: '&cYour Jetpack has broken.'
+  given: '&aGave &f{item} &ato &f{player}&a.'
+  fuel-added: '&aAdded &f{amount} &aphysical fuel. Inventory total: &f{fuel}&a.'
+  no-permission: '&cYou do not have permission.'
+  player-only: '&cThat command can only be used by a player.'
+  usage: '&e/jpwsadmin give <player> <jetpack|wingsuit> &7or &e/jpwsadmin fuel [amount]'
+  reloaded: '&aConfiguration reloaded.'
